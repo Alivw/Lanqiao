@@ -1,4 +1,4 @@
-package qpl;
+package com.awei.lanqiao.qpl;
 
 import java.util.Arrays;
 

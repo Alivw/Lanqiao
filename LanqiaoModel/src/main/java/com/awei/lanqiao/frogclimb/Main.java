@@ -1,4 +1,4 @@
-package frogclimb;
+package com.awei.lanqiao.frogclimb;
 
 /**
  * @Description:

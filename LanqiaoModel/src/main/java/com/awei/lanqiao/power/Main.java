@@ -1,4 +1,4 @@
-package power;
+package com.awei.lanqiao.power;
 
 /**
  * @Description: 倍数

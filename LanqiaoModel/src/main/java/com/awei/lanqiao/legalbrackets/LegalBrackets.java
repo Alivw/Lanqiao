@@ -1,4 +1,4 @@
-package legalbrackets;
+package com.awei.lanqiao.legalbrackets;
 
 public class LegalBrackets {
     public static int count = 0, n = 4;

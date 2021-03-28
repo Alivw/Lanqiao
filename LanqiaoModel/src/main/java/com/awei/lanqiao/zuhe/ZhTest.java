@@ -1,4 +1,4 @@
-package zuhe;
+package com.awei.lanqiao.zuhe;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,6 @@ import java.util.List;
  * @Create: 2021-03-27 23:47
  **/
 public class ZhTest {
-    static List<List<Integer>> reList = new ArrayList<>();
     static List<Integer> list = new ArrayList<>();
     static int n = 2;
     /**
@@ -17,17 +16,14 @@ public class ZhTest {
      */
     public static void main(String[] args) {
         int[] arr = new int[]{1, 2, 3, 4};
-        f(arr, 0,0);
+        f(arr, 0, 0);
     }
 
     private static void f(int[] arr, int start,int size) {
         if (size == n) {
-            for (int i = 0; i < list.size(); i++) {
-                System.out.print(list.get(i));
-            }
+            list.forEach(i -> System.out.print(i));
             System.out.println();
-            reList.add(list);
-            return;
+            return ;
         }
         for (int i = start; i < arr.length; i++) {
             list.add(arr[i]);
@@ -36,6 +32,5 @@ public class ZhTest {
             list.remove((Integer) arr[i]);
             size--;
         }
-        return;
     }
 }
