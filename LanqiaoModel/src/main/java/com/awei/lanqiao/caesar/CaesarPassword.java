@@ -21,4 +21,9 @@ public class CaesarPassword {
         System.out.println(out.substring(0, out.length() - 2));
 
     }
+
+
+    public String reverseLeftWords(String s, int n) {
+        return s.substring(n,s.length())+ s.substring(0,n+1);
+    }
 }
