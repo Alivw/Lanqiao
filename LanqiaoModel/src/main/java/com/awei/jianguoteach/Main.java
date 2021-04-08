@@ -22,7 +22,6 @@ public class Main {
             f(arr, start, mid, temp);
             f(arr, mid + 1, end, temp);
             merge(arr, start, mid, end, temp);
-
         }
     }
 
