@@ -8,11 +8,15 @@ import java.util.Arrays;
  * @Create: 2021-04-08 18:42
  **/
 public class Main {
+
+    /**
+     * 主函数
+     * @param args
+     */
     public static void main(String[] args) {
-        int[] arr = {4, 3, 2, 1};
+        int[] arr = {9, 8, 7, 6, 5, 4, 3, 2, 1};
         int[] temp = new int[arr.length];
-        int start=0, end = arr.length - 1;
-        f(arr, start, end, temp);
+        f(arr, 0, arr.length - 1, temp);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -25,14 +29,20 @@ public class Main {
         }
     }
 
+    /**
+     * 合并方法
+     * @param arr
+     * @param start
+     * @param mid
+     * @param end
+     * @param temp
+     */
     private static void merge(int[] arr, int start, int mid, int end, int[] temp) {
-        int i = start;      //left point
-        int j = mid + 1;        //right point
-        int k = 0;      //temp  index
-        while (i <= mid && j <= end) {      //两边都没有到头， 比较指针指向的值的大小
-            if (arr[i] < arr[j])
+        int i = start, j = mid + 1, k = 0;
+        while (i <= mid && j <= end) {
+            if (arr[i] < arr[j]) {
                 temp[k++] = arr[i++];
-            else temp[k++] = arr[j++];
+            } else temp[k++] = arr[j++];
         }
         while (i <= mid) {
             temp[k++] = arr[i++];
